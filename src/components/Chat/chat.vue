@@ -2,7 +2,9 @@
   <div class="channel">
     <ul>
       <li v-for="(channel) in channels">
-        {{ channel }}
+        <router-link :to="{ name: 'Channel', params: { cname: channel }}">
+          {{ channel }}
+        </router-link>
       </li>
     </ul>
   </div>
